@@ -13,5 +13,13 @@
     <string name="get_started">GET STARTED</string>
     <string name="welcome_screen">Welcome screen</string>
     <string name="swoosh_logo">swoosh logo</string>
+    <string name="app_logo">app logo</string>
+    <string name="skill_level">skill level</string>
+    <string name="i_am_a">I am a:</string>
+    <string name="togglebutton">ToggleButton</string>
+    <string name="beginner">BEGINNER</string>
+    <string name="baller">BALLER</string>
+    <string name="finish">FINISH</string>
+    <string name="search_league">Looking for a co-ed League Near You..</string>
 
 </resources>
