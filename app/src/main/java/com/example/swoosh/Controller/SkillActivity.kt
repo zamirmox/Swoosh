@@ -19,6 +19,19 @@ class SkillActivity : AppCompatActivity() {
         println(">>>>>>>>>")
         println(player.league)
     }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState?.putParcelable(EXTRA_PLAYER, player)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        if (savedInstanceState != null) {
+            player = savedInstanceState.getParcelable(EXTRA_PLAYER)!!
+        }
+    }
+
     fun onBallerClick(view: View) {
         beginnerSkillBtn.isChecked = false
         player.skill = "baller"

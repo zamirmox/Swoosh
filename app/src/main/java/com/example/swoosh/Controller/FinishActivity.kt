@@ -13,7 +13,7 @@ class FinishActivity : AppCompatActivity() {
         setContentView(R.layout.activity_finish)
         val player = intent.getParcelableExtra<Player>(EXTRA_PLAYER)
         if (player != null) {
-            searchLeaguesText.text="Looking for ${player.league.toString()} ${player.skill.toString()} league near you ...."
+            searchLeaguesText.text="Looking for ${player.league} ${player.skill} league near you ...."
         }
     }
 }

@@ -11,11 +11,22 @@ import kotlinx.android.synthetic.main.activity_league.*
 
 class LeagueActivity: BaseActivity() {
     var player = Player(league = "", skill = "")
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState?.putParcelable(EXTRA_PLAYER, player)
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_league)
     }
 
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        if(savedInstanceState != null){
+            player = savedInstanceState.getParcelable(EXTRA_PLAYER)!!
+        }
+    }
     fun onMensClicked(view:View) {
         womensLeagueBtn.isChecked=false
         coedLeagueBtn.isChecked = false
